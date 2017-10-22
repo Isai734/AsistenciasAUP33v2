@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imv_lista_alumno"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/card_text_right_left_padding"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txv_nombre_alumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/card_text_right_left_padding"
+        android:layout_toRightOf="@id/imv_lista_alumno"
+        android:paddingTop="@dimen/card_actions_padding"
+        android:text="Cesar Jimon Gatica"
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@+id/txv_nombre_alumno"
+        android:layout_marginRight="@dimen/card_text_right_left_padding"
+        android:layout_toRightOf="@id/imv_lista_alumno"
+        android:background="@color/cardview_dark_background"
+        android:gravity="center_vertical" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_toRightOf="@id/imv_lista_alumno"
+        android:orientation="horizontal"
+        android:padding="@dimen/card_actions_padding">
+
+        <RadioButton
+            android:id="@+id/rdb_asistio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asistencia" />
+
+        <RadioButton
+            android:id="@+id/rdb_retardo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retardo" />
+
+        <RadioButton
+            android:id="@+id/rdb_falto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Falta" />
+    </RadioGroup>
+
+</RelativeLayout>
+
